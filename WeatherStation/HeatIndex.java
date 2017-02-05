@@ -1,15 +1,25 @@
+import java.util.Observable;
+import java.util.Observer;
+
 public class HeatIndex implements Observer, DisplayElement {
+    private Observable observable;
     private float heatIndex;
     private Subject weatherData;
 
-    public HeatIndex (WeatherData weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+    public HeatIndex (Observable observable) {
+        this.observable = observable;
+        observable.addObserver(this);
     }
 
-    public void update(float temperature, float humidity, float pressure) {
-        heatIndex = computeHeatIndex(temperature, humidity);
-        display();
+    public void update(Observable observable, Object arg) {
+        if (observable instanceof WeatherData) {
+            WeatherData weatherData = (WeatherData)observable;
+            float temperature = weatherData.getTemperature();
+            float humidity = weatherData.getHumidity();
+
+            heatIndex = computeHeatIndex(temperature, humidity);
+            display();
+        }
     }
 
     public void display() {
