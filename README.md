@@ -1,6 +1,6 @@
 # DesignPatterns
 My travels through Head First Design Patterns
 
-# Pattern -> Project Mapping
+# Pattern to Project Mapping
 * Observer -> WeatherStation
 * Strategy -> Duck
