@@ -1,3 +1,6 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class OrderCoffee {
     public static void main(String args[]) {
         Beverage beverage = new Espresso();
@@ -14,10 +17,18 @@ public class OrderCoffee {
         beverage3 = new Mocha(beverage3);
         beverage3 = new Whip(beverage3);
         printReceipt(beverage3);
+
+        Beverage beverage4 = new Decaf();
+        beverage4.setSize(Beverage.Size.Grande);
+        beverage4 = new Soy(beverage4);
+        printReceipt(beverage4);
     }
 
     private static void printReceipt(Beverage beverage) {
+        DecimalFormat decimalFormat = new DecimalFormat("0.00");
+        decimalFormat.setRoundingMode(RoundingMode.DOWN);
+
         System.out.println(beverage.getDescription() +
-            ": $" + beverage.cost());
+            ": $" + decimalFormat.format(beverage.cost()));
     }
 }
