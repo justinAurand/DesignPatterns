@@ -1,1 +1,3 @@
-public interface Pepperoni {}
+public interface Pepperoni {
+    String getName();
+}

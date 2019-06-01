@@ -1,1 +1,3 @@
-public interface Clams {}
+public interface Clams {
+    String getName();
+}

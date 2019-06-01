@@ -1,1 +1,3 @@
-public interface Sauce {}
+public interface Sauce {
+    String getName();
+}

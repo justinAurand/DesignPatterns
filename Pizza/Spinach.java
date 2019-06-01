@@ -1,1 +1,5 @@
-public class Spinach implements Veggies {}
+public class Spinach implements Veggies {
+    public String getName() {
+        return "Spinach";
+    }
+}

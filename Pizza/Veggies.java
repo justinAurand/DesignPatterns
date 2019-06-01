@@ -1,1 +1,3 @@
-public interface Veggies {}
+public interface Veggies {
+    String getName();
+}

@@ -1,1 +1,3 @@
-public interface Dough {}
+public interface Dough {
+    String getName();
+}

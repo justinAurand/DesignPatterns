@@ -27,7 +27,26 @@ public abstract class Pizza {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
+    public String toString() {
+        StringBuilder builder = new StringBuilder(name + "\n");
+        builder.append(dough.getName() + "\n");
+        builder.append(sauce.getName() + "\n");
+        builder.append(cheese.getName() + "\n");
+
+        if (veggies != null && veggies.length > 0) {
+            builder.append("Veggies:\n");
+            for (Veggies veggie : veggies) {
+                builder.append("  " + veggie.getName() + "\n");
+            }
+        }
+
+        if (pepperoni != null) {
+            builder.append(pepperoni.getName() + "\n");
+        }
+        if (clams != null) {
+            builder.append(clams.getName() + "\n");
+        }
+
+        return builder.toString();
     }
 }

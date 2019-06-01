@@ -1,1 +1,3 @@
-public interface Cheese {}
+public interface Cheese {
+    String getName();
+}
