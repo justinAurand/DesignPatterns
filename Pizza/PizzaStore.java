@@ -1,5 +1,5 @@
 public abstract class PizzaStore {
-    public Pizza orderPizza(String pizzaType) {
+    public Pizza orderPizza(Pizzas pizzaType) {
         Pizza pizza;
         pizza = createPizza(pizzaType);
 
@@ -11,5 +11,5 @@ public abstract class PizzaStore {
         return pizza;
     }
 
-    protected abstract Pizza createPizza(String pizzaType);
+    protected abstract Pizza createPizza(Pizzas pizzaType);
 }

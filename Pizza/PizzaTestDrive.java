@@ -3,16 +3,16 @@ public class PizzaTestDrive {
         PizzaStore nyStore = new NyPizzaStore();
         PizzaStore chicagoStore = new ChicagoPizzaStore();
 
-        Pizza pizza = nyStore.orderPizza("veggie");
+        Pizza pizza = nyStore.orderPizza(Pizzas.Veggie);
         System.out.println("Ethan received...\n" + pizza.toString());
 
-        pizza = chicagoStore.orderPizza("veggie");
+        pizza = chicagoStore.orderPizza(Pizzas.Veggie);
         System.out.println("Joel received...\n" + pizza.toString());
 
-        pizza = nyStore.orderPizza("clam");
+        pizza = nyStore.orderPizza(Pizzas.Clam);
         System.out.println("Sebastian received...\n" + pizza.toString());
 
-        pizza = chicagoStore.orderPizza("pepperoni");
+        pizza = chicagoStore.orderPizza(Pizzas.Pepperoni);
         System.out.println("Jeffy received...\n" + pizza.toString());
     }
 }
