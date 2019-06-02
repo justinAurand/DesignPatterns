@@ -6,6 +6,6 @@ My travels through Head First Design Patterns
 
 * Singleton -> ChocolateFactory
 * Decorator -> Beverage, JavaIoDecorator
-* Factory   -> Pizza
-* Observer  -> WeatherStation
-* Strategy  -> Duck
+* Factory -> Pizza
+* Observer -> WeatherStation
+* Strategy -> Duck
