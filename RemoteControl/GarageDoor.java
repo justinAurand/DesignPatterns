@@ -1,21 +1,21 @@
 public class GarageDoor {
     public void up() {
-        System.out.println("Garage door is up");
+        System.out.println("Garage Door is up");
     }
 
     public void down() {
-        System.out.println("Garage door is down");
+        System.out.println("Garage Door is down");
     }
 
     public void stop() {
-        System.out.println("Garage door is stopped");
+        System.out.println("Garage Door is stopped");
     }
 
     public void lightOn() {
-        System.out.println("Garage door light is on");
+        System.out.println("Garage Door light is on");
     }
 
     public void lightOff() {
-        System.out.println("Garage door light is off");
+        System.out.println("Garage Door light is off");
     }
 }
