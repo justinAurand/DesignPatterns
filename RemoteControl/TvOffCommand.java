@@ -1,5 +1,3 @@
-import jdk.nashorn.api.tree.TreeVisitor;
-
 public class TvOffCommand implements Command {
     Tv tv;
 
