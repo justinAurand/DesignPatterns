@@ -8,4 +8,8 @@ public class CeilingFanOnCommand implements Command {
     public void execute() {
         fan.high();
     }
+
+    public void undo() {
+        fan.off();
+    }
 }
