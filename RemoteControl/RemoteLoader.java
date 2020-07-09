@@ -8,25 +8,13 @@ public class RemoteLoader {
         GarageDoor garageDoor = new GarageDoor();
         Stereo stereo = new Stereo();
 
-        LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
-        LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
-        LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
-        LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
-
-        CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
-        CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
-
-        GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
-        GarageDoorDownCommand garageDoorDown = new GarageDoorDownCommand(garageDoor);
-
         StereoOnWithCdCommand stereoOnWithCd = new StereoOnWithCdCommand(stereo);
-        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
 
-        remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
-        remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-        remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
-        remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
-        remoteControl.setCommand(4, stereoOnWithCd, stereoOff);
+        remoteControl.setCommand(0, livingRoomLight::on, livingRoomLight::off);
+        remoteControl.setCommand(1, kitchenLight::on, kitchenLight::off);
+        remoteControl.setCommand(2, ceilingFan::high, ceilingFan::off);
+        remoteControl.setCommand(3, garageDoor::up, garageDoor::down);
+        remoteControl.setCommand(4, stereoOnWithCd, stereo::off);
 
         System.out.println(remoteControl);
 

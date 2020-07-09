@@ -8,12 +8,11 @@ public class RemoteControlWithUndo {
         onCommands = new Command[slotCount];
         offCommands = new Command[slotCount];
 
-        NoCommand noCommand = new NoCommand();
         for (int i = 0; i < slotCount; i++) {
-            onCommands[i] = noCommand;
-            offCommands[i] = noCommand;
+            onCommands[i] = () -> {};
+            offCommands[i] = () -> {};
         }
-        undoCommand = noCommand;
+        undoCommand = () -> {};
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -32,7 +31,7 @@ public class RemoteControlWithUndo {
     }
 
     public void undoButtonWasPressed() {
-        undoCommand.undo();
+        //undoCommand.undo();
     }
 
     public String toString() {

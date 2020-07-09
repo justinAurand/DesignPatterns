@@ -13,7 +13,7 @@ public class MacroCommand implements Command {
 
     public void undo() {
         for (int i = commands.length -1; i >= 0; i--) {
-            commands[i].undo();
+            //commands[i].undo();
         }
     }
 }

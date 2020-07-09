@@ -7,10 +7,9 @@ public class RemoteControl {
         onCommands = new Command[slotCount];
         offCommands = new Command[slotCount];
 
-        NoCommand noCommand = new NoCommand();
         for (int i = 0; i < slotCount; i++) {
-            onCommands[i] = noCommand;
-            offCommands[i] = noCommand;
+            onCommands[i] = () -> {};
+            offCommands[i] = () -> {};
         }
     }
 
