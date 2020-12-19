@@ -27,10 +27,10 @@ public class Trainee {
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
-        builder.append(firstName + " ");
-        builder.append(lastName + " ");
-        builder.append(department + " ");
-        builder.append(hired + " ");
+        builder.append(firstName + ", ");
+        builder.append(lastName + ", ");
+        builder.append(department + ", ");
+        builder.append(hired);
 
         return builder.toString();
     }
