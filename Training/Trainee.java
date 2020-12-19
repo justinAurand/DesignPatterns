@@ -30,6 +30,7 @@ public class Trainee {
 
         // Calculating seniority in months (since no one is hired in both the same month and year)
         int monthsEmployed = (int)Period.between(today, hired).toTotalMonths();
+
         return monthsEmployed;
     };
 

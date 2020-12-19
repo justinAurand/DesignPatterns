@@ -7,6 +7,6 @@ public class SortBySeniorityDescending implements Comparator<Trainee>
         int seniority1 = trainee1.calculateSeniority();
         int seniority2 = trainee2.calculateSeniority();
 
-        return seniority2 - seniority1;
+        return seniority1 - seniority2;
     }
 }
