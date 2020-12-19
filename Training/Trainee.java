@@ -20,6 +20,10 @@ public class Trainee {
         return seniority;
     };
 
+    // This is an override of the toString function built into Java.
+    // Any time you print something to the console, the toString function, built into all types, is called behind the scenes.
+    // For complex objects like our Trainee class, toString usually prints the class name and some memory location garbage.
+    // Here, we're "overriding" toSring to print something meaningful when called.
     public String toString() {
         StringBuilder builder = new StringBuilder();
 

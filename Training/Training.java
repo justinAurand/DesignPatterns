@@ -16,11 +16,11 @@ public class Training {
                 add(new Trainee("Joanne", "Gales", "Sales", LocalDate.of(2011, Month.DECEMBER, 1)));
                 add(new Trainee("Jo", "Helsinki", "Personnel", LocalDate.of(2010, Month.MAY, 1)));
                 add(new Trainee("Janine", "Koln", "Sales", LocalDate.of(2019, Month.APRIL, 5)));
+                add(new Trainee("Daniel", "Martella", "Reporting", LocalDate.of(2020, Month.DECEMBER, 1)));
             }
         };
 
-        for (int i=0; i < trainees.size(); i++) {
-            System.out.println(trainees.get(i).toString());
-        }
+        Report report = new Report();
+        report.generate(trainees);
     }
 }
