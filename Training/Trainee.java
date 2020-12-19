@@ -1,5 +1,6 @@
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Trainee {
     private String firstName;
@@ -14,15 +15,27 @@ public class Trainee {
         this.hired = hired;
     }
 
+    // Added so we can sort by it
+    public String getLastName() {
+        return lastName;
+    }
+
+    // Added so we can sort by it
+    public String getDepartment() {
+        return department;
+    }
+
     public int calculateSeniority() {
         LocalDate today = LocalDate.now();
-        int seniority = Duration.between(hired, today).getNano();
-        return seniority;
+
+        // Calculating seniority in months (since no one is hired in both the same month and year)
+        int monthsEmployed = (int)Period.between(today, hired).toTotalMonths();
+        return monthsEmployed;
     };
 
     // This is an override of the toString function built into Java.
     // Any time you print something to the console, the toString function, built into all types, is called behind the scenes.
-    // For complex objects like our Trainee class, toString usually prints the class name and some memory location garbage.
+    // For complex objects like this Trainee class, toString usually prints the class name and some memory location garbage.
     // Here, we're "overriding" toSring to print something meaningful when called.
     public String toString() {
         StringBuilder builder = new StringBuilder();
